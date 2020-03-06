@@ -6,11 +6,10 @@ export default class ErrorBoundary extends Component{
         hasError: false
     };
 
-
-
     componentDidCatch(){
         this.setState({hasError: true})
     }
+
     render(){
         if(this.state.hasError){
             return <ErrorIndicator/>;
